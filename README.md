@@ -98,10 +98,10 @@ $$
 \begin{equation}
 \begin{pmatrix} \Delta_{rx1} \\ \Delta_{rx2} \\ \Delta_{rx3} \\ \Delta_{rx4}\end{pmatrix} =
 \begin{pmatrix}
-    angle(I_{SRC.A3} + I_{Incident.A3} + j(Q_{SRC.A3} + Q_{Incident.A3})) - angle(I_{SRC.A2} + I_{Incident.A2} + j(Q_{SRC.A2} + Q_{Incident.A2})) \\
-    angle(I_{SRC.A2} + I_{Incident.A2} + j(Q_{SRC.A2} + Q_{Incident.A2})) - angle(I_{SRC.A1} + I_{Incident.A1} + j(Q_{SRC.A1} + Q_{Incident.A1})) \\
-    angle(I_{SRC.A1} + I_{Incident.A1} + j(Q_{SRC.A1} + Q_{Incident.A1})) - angle(I_{SRC.A0} + I_{Incident.A0} + j(Q_{SRC.A0} + Q_{Incident.A0})) \\
-    angle(I_{SRC.A0} + I_{Incident.A0} + j(Q_{SRC.A0} + Q_{Incident.A0})) - angle(I_{SRC.A3} + I_{Incident.A3} + j(Q_{SRC.A3} + Q_{Incident.A3})) \\
+    angle(I_{SRC.A2} + I_{Incident.A2} + j(Q_{SRC.A2} + Q_{Incident.A2})) - angle(I_{SRC.A3} + I_{Incident.A3} + j(Q_{SRC.A3} + Q_{Incident.A3})) \\
+    angle(I_{SRC.A1} + I_{Incident.A1} + j(Q_{SRC.A1} + Q_{Incident.A1})) - angle(I_{SRC.A2} + I_{Incident.A2} + j(Q_{SRC.A2} + Q_{Incident.A2})) \\
+    angle(I_{SRC.A0} + I_{Incident.A0} + j(Q_{SRC.A0} + Q_{Incident.A0})) - angle(I_{SRC.A0} + I_{Incident.A0} + j(Q_{SRC.A0} + Q_{Incident.A0})) \\
+    angle(I_{SRC.A3} + I_{Incident.A3} + j(Q_{SRC.A3} + Q_{Incident.A3})) - angle(I_{SRC.A1} + I_{Incident.A1} + j(Q_{SRC.A1} + Q_{Incident.A1})) \\
 \end{pmatrix} + error_{const}
 \end{equation}
 $$
@@ -120,10 +120,10 @@ $$
 $$
 \begin{equation}
 \begin{cases}
-    \varphi_{A2} - \varphi_{A3} =  angle(I_{SRC.A3} + I_{Incident.A3} + j(Q_{SRC.A3} + Q_{Incident.A3})) - angle(I_{SRC.A2} + I_{Incident.A2} + j(Q_{SRC.A2} + Q_{Incident.A2}))   \\
-    \varphi_{A1} - \varphi_{A2} = angle(I_{SRC.A2} + I_{Incident.A2} + j(Q_{SRC.A2} + Q_{Incident.A2})) - angle(I_{SRC.A1} + I_{Incident.A1} + j(Q_{SRC.A1} + Q_{Incident.A1}))    \\
-    \varphi_{A0} - \varphi_{A1} =  angle(I_{SRC.A1} + I_{Incident.A1} + j(Q_{SRC.A1} + Q_{Incident.A1})) - angle(I_{SRC.A0} + I_{Incident.A0} + j(Q_{SRC.A0} + Q_{Incident.A0}))    \\
-    \varphi_{A3} - \varphi_{A0} = angle(I_{SRC.A0} + I_{Incident.A0} + j(Q_{SRC.A0} + Q_{Incident.A0})) - angle(I_{SRC.A3} + I_{Incident.A3} + j(Q_{SRC.A3} + Q_{Incident.A3}))  \\
+    \varphi_{A2} - \varphi_{A3} =  angle(I_{SRC.A2} + I_{Incident.A2} + j(Q_{SRC.A2} + Q_{Incident.A2})) - angle(I_{SRC.A3} + I_{Incident.A3} + j(Q_{SRC.A3} + Q_{Incident.A3}))   \\
+    \varphi_{A1} - \varphi_{A2} = angle(I_{SRC.A1} + I_{Incident.A1} + j(Q_{SRC.A1} + Q_{Incident.A1})) - angle(I_{SRC.A2} + I_{Incident.A2} + j(Q_{SRC.A2} + Q_{Incident.A2}))    \\
+    \varphi_{A0} - \varphi_{A1} =  angle(I_{SRC.A0} + I_{Incident.A0} + j(Q_{SRC.A0} + Q_{Incident.A0})) - angle(I_{SRC.A0} + I_{Incident.A0} + j(Q_{SRC.A0} + Q_{Incident.A0}))    \\
+    \varphi_{A3} - \varphi_{A0} = angle(I_{SRC.A3} + I_{Incident.A3} + j(Q_{SRC.A3} + Q_{Incident.A3})) - angle(I_{SRC.A1} + I_{Incident.A1} + j(Q_{SRC.A1} + Q_{Incident.A1}))  \\
     A_{A0}^2 = (I_{SRC.A0} + I_{Incident.A0})^2 + (Q_{SRC.A0} + Q_{Incident.A0})^2\\
     A_{A1}^2 = (I_{SRC.A1} + I_{Incident.A1})^2 + (Q_{SRC.A1} + Q_{Incident.A1})^2\\
     A_{A2}^2 = (I_{SRC.A2} + I_{Incident.A2})^2 + (Q_{SRC.A2} + Q_{Incident.A2})^2\\
@@ -146,7 +146,7 @@ $$
 
 На основе модели известна необходимая разность фаз между приемными каналами, чтобы угол пеленга соответствовал истинном углу источника радиоизлучения (ИРИ). При решении задачи в первом приближении полагаем, что ошибки вносимые радиосканером несущественные и что ошибка определения углов связана исключительно с помеховым сигналом.
 
-Надо понять от чего зависит дельта между должной разностью фаз и недолжной разностью фаз. Система становится уже сложной преобразуем систему уравнений (1)
+Надо понять от чего зависит дельта между должной разностью фаз и недолжной разностью фаз.
 
 
 
